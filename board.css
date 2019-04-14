@@ -1,0 +1,94 @@
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+}
+
+.board__main{
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.board__title{
+    margin: 0;
+}
+
+.board__form{
+    margin-bottom: 50px; 
+}
+
+.board__form-input > input{
+    margin-top: 10px;
+    width: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.board__form-textarea > textarea{
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.board__form-submit{
+    position: absolute;
+    padding: 5px 30px;
+    background: skyblue;
+    border: none;
+    color: white;
+    right: 0px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.board__form-submit:hover{
+    background: rgb(116, 157, 233);
+}
+
+.comment{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.comment__header{
+    border-bottom: solid 1px #ccc;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.comment__content{
+    padding: 5px;
+}
+
+.comment__author{
+    display: inline-block;
+}
+
+.comment__time{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.board__subcomments{
+    margin-left: 10px;
+}
+
+.board__subcomments .comment{
+    box-shadow: none;
+    background: #f2f7fb;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.board__subcomments .board__form-textarea > textarea{
+    height: 100px;
+}
