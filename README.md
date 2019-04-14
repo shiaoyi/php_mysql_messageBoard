@@ -1,4 +1,4 @@
-# php_mysql_messageBoard
+# 會員留言板
 使用php和mysql來串資料的留言板
 
 ### 使用技術
