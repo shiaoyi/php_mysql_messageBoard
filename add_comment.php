@@ -21,8 +21,8 @@
     $conn->close();
 
     if($parent_id === '0'){
-        $arr = array('result' => 'success', 'parentId' => $parent_id, 'id' => $last_id, 'time' => $time, 'user' => $user);
-        echo json_encode($arr);
+    $arr = array('result' => 'success', 'parentId' => $parent_id, 'id' => $last_id, 'time' => $time, 'user' => $user);
+    echo json_encode($arr);
     }else{
         header('Location: index.php');
     }
