@@ -6,3 +6,5 @@
 * ajax
 * 使用 session id 加強會員系統
 * 資安問題：預防 XSS、SQL Injection、密碼非使用明碼
+* gulp
+* sass
