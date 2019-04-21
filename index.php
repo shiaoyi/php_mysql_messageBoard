@@ -25,28 +25,43 @@
     <title>Message Board</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./build/board.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="./build/ajax.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.php">留言板</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <?
+                    if(!$is_login){
+                ?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login.php">登入 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.php">註冊</a>
+                    </li>
+                <?
+                    }else{
+                ?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="logout.php">登出 <span class="sr-only">(current)</span></a>
+                    </li>
+                <?
+                    }
+                ?>
+            </ul>
+        </div>
+    </nav>
     <div class="board__main" >
-        <?
-            if(!$is_login){
-        ?>
-            <a href="login.php">登入</a>
-            <a href="register.php">註冊</a>
-        <?
-            }else{
-        ?>
-            <a href="logout.php">登出</a>
-        <?
-            }
-        ?>
-        
-        <h1 class="board__title">
-            留言板
-        </h1>
-        <div class="board__form">
+        <h2 class="board__title">建立貼文</h2>
+       <div class="board__form">
             <form method="POST" action="add_comment.php">
                 <div class="board__form-textarea">
                     <textarea name="content" placeholder="留言..." ></textarea>
